@@ -1,0 +1,76 @@
+body {
+  margin: 0px;
+  font-family: "Playfair";
+}
+
+h2 {
+  font-size: 2rem;
+  font-weight: 300;
+}
+
+p {
+  font-size: 1.15rem;
+}
+
+.grid {
+  display: grid;
+}
+
+.flex {
+  display: flex;
+}
+
+.portrait {
+  margin: 20px 0px 20px 30px;
+  position: relative;
+  min-width: 240px;
+}
+
+.pug-portrait {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.portrait-name {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 3rem;
+  white-space: nowrap;
+  color: white;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+
+.about-me {
+  grid-template-columns: 1fr 2fr;
+  background-color: #add8e6;
+  background: linear-gradient(170deg, #ADD8E6 70%, #FFFFFF 70%);
+}
+
+.about-text {
+  background-color: white;
+  margin: 70px 30px 70px 0px;
+  justify-content: center;
+
+  padding: 15px;
+}
+
+.about-text h2, .about-text p {
+ margin: 0px;
+}
+
+.icon-container {
+  justify-content: flex-end;
+  gap: 10px;
+}
+
+.box-shadow {
+  box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.3);
+}
+
+.icon {
+  width: 25px;
+}
