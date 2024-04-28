@@ -25,6 +25,9 @@ body {
   overflow-x: hidden;
   background: linear-gradient(170deg, #add8e6 70%, #ffffff 70%);
   background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
 }
 
 h1,
@@ -55,6 +58,7 @@ h6 {
   align-items: center;
   position: relative;
   margin: 0 auto;
+  box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.3);
 }
 
 .portrait > img {
@@ -73,6 +77,7 @@ h6 {
 .about-text {
   text-align: center;
   background-color: white;
+  box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.3);
 }
 
 .about-text > p {
@@ -81,6 +86,45 @@ h6 {
 
 .about-text > :last-child {
   font-size: 1.5rem;
+}
+
+.projects {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 400px));
+  /* This is better for small screens, once min() is better supported */
+  /* grid-template-columns: repeat(auto-fill, minmax(min(200px, 100%), 1fr)); */
+  gap: 2rem;
+  place-items: center;
+  place-content: center;
+  margin: 2rem;
+}
+
+.project {
+  display: grid;
+  grid-template-rows: 1.5fr 1fr;
+  background: #ede7f6;
+  height: fit-content;
+  box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.3);
+}
+
+.project-info {
+  display: grid;
+  grid-template-columns: 1fr 0.2fr 0.2fr;
+  padding: 0px 1.5rem;
+  align-items: center;
+}
+
+.project-info p,
+.project-info h3 {
+  margin: 0px;
+}
+
+.project-preview {
+  width: 100%;
+}
+
+.project-preview > img {
+  width: 100%;
 }
 
 @media (max-width: 600px) {
@@ -99,6 +143,7 @@ h6 {
 
   .about-text {
     background-color: transparent;
+    box-shadow: none;
   }
 
   .about-me {
@@ -143,7 +188,6 @@ h6 {
     line-height: 1.5;
     text-align: center;
     width: 100%;
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   }
 
   .about-text > p {
@@ -191,7 +235,6 @@ h6 {
     gap: 2rem;
     align-content: space-between;
     text-align: justify;
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     padding: 1rem;
     width: 100%;
     line-height: 1.5rem;
