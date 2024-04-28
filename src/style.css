@@ -93,8 +93,21 @@ h6 {
     max-width: 400px;
   }
 
+  .icon-container {
+    justify-content: center;
+  }
+
   .about-text {
     background-color: transparent;
+  }
+
+  .about-me {
+    min-width: 280px;
+  }
+
+  .about-me h1 {
+    font-size: 3rem;
+    text-align: center;
   }
 }
 
