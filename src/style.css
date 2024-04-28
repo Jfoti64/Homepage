@@ -1,76 +1,197 @@
-body {
-  margin: 0px;
-  font-family: "Playfair";
+* {
+  font-family: 'Roboto';
+  box-sizing: border-box;
 }
 
-h2 {
-  font-size: 2rem;
-  font-weight: 300;
-}
-
-p {
-  font-size: 1.15rem;
-}
-
-.grid {
-  display: grid;
-}
-
-.flex {
-  display: flex;
-}
-
-.portrait {
-  margin: 20px 0px 20px 30px;
+html {
   position: relative;
-  min-width: 240px;
-}
-
-.pug-portrait {
-  width: 100%;
-  height: auto;
-  object-fit: cover;
-}
-
-.portrait-name {
-  position: absolute;
-  bottom: 10px;
-  left: 50%;
-  transform: translateX(-50%);
-  font-size: 3rem;
-  white-space: nowrap;
-  color: white;
-  text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
-}
-
-
-.about-me {
-  grid-template-columns: 1fr 2fr;
-  background-color: #add8e6;
-  background: linear-gradient(170deg, #ADD8E6 70%, #FFFFFF 70%);
-}
-
-.about-text {
-  background-color: white;
-  margin: 70px 30px 70px 0px;
-  justify-content: center;
-
-  padding: 15px;
-}
-
-.about-text h2, .about-text p {
- margin: 0px;
+  overflow-x: hidden;
 }
 
 .icon-container {
+  display: flex;
   justify-content: flex-end;
   gap: 10px;
 }
 
-.box-shadow {
-  box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.3);
-}
-
 .icon {
   width: 25px;
+}
+
+body {
+  margin: 0px;
+  width: 100vw;
+  box-sizing: border-box;
+  overflow-x: hidden;
+  background: linear-gradient(170deg, #add8e6 70%, #ffffff 70%);
+  background-repeat: no-repeat;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Playfair Display', serif;
+}
+
+.about-me {
+  max-width: 1000px;
+  position: relative;
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 1rem;
+  padding-bottom: 0;
+  margin: 0 auto;
+  gap: 1rem;
+}
+
+.portrait {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  margin: 0 auto;
+}
+
+.portrait > img {
+  width: 100%;
+}
+
+.portrait > h1 {
+  position: absolute;
+  bottom: 1%;
+  margin: 0;
+  color: white;
+  font-weight: 900;
+  text-shadow: 1px 1px 2px black;
+}
+
+.about-text {
+  text-align: center;
+  background-color: white;
+}
+
+.about-text > p {
+  max-width: 400px;
+}
+
+.about-text > :last-child {
+  font-size: 1.5rem;
+}
+
+@media (max-width: 600px) {
+  .portrait {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    margin: 0 auto;
+    max-width: 400px;
+  }
+
+  .about-text {
+    background-color: transparent;
+  }
+}
+
+@media (min-width: 601px) and (max-width: 999px) {
+  .about-me {
+    display: block;
+    position: relative;
+    text-align: center;
+    padding: 1rem;
+    padding-top: 7rem;
+    width: 90%;
+  }
+
+  .portrait {
+    width: 150px;
+    float: left;
+    margin: 50px;
+    transform: scale(1.8) translate(-10%, -10%);
+  }
+
+  .about-me h1 {
+    position: absolute;
+    bottom: 0;
+    left: 80px;
+    top: 0px;
+    width: 300px;
+    margin: 0.67em;
+  }
+
+  .about-text {
+    padding: 5rem;
+    margin: auto;
+    line-height: 1.5;
+    text-align: center;
+    width: 100%;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  }
+
+  .about-text > p {
+    text-align: justify;
+    max-width: 100%;
+  }
+
+  .about-text > h2 {
+    font-size: 2.5rem;
+    display: inline;
+    text-align: center;
+  }
+}
+
+@media (min-width: 1000px) {
+  body {
+    background: linear-gradient(172deg, #add8e6 70%, #ffffff 70%);
+    background-repeat: no-repeat;
+  }
+
+  .about-me {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    justify-items: center;
+    box-shadow: none;
+    text-align: center;
+    padding-top: 3rem;
+    gap: 0;
+    width: 100%;
+    background-color: transparent;
+  }
+
+  .about-me h1 {
+    font-size: 2.5rem;
+  }
+
+  .portrait {
+    margin: 0;
+    transform: none;
+  }
+
+  .about-text {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    align-content: space-between;
+    text-align: justify;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    padding: 1rem;
+    width: 100%;
+    line-height: 1.5rem;
+  }
+
+  .about-text p {
+    max-width: 100%;
+    margin: 0;
+  }
+
+  .about-text > h2 {
+    padding: 1rem 0;
+    margin: 0;
+    font-size: 2rem;
+  }
 }
